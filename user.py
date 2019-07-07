@@ -13,20 +13,19 @@ class user:
     def displayBalance(self):
         print(self.balance)
 
-    def transferMoney(self, amount, u):
+    def transferMoney(self, amount, other):
         if amount > self.balance:
             print('Sorry, not enough funds.')
         else:
-            print(f'Original balance for {u.name} is {u.balance}')
+            # print(f'Original balance for {other.name} is {other.balance}')
             self.balance -= amount
-            u.balance += amount
-            print(f'New balance for {u.name} is {u.balance}')
+            other.balance += amount
+            # print(f'New balance for {other.name} is {other.balance}')
+
 
 mike = user('mike', 500)
 ana = user('ana', 500)
 john = user('john', 500)
 
 
-
-mike.makeDeposit(800)
-mike.displayBalance()
+mike.transferMoney(200, ana)
