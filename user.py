@@ -17,10 +17,10 @@ class user:
         if amount > self.balance:
             print('Sorry, not enough funds.')
         else:
-            # print(f'Original balance for {u.name} is {u.balance}')
+            print(f'Original balance for {u.name} is {u.balance}')
             self.balance -= amount
             u.balance += amount
-            # print(f'New balance for {u.name} is {u.balance}')
+            print(f'New balance for {u.name} is {u.balance}')
 
 mike = user('mike', 500)
 ana = user('ana', 500)
